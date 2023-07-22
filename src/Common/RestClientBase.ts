@@ -142,7 +142,7 @@ export class RestClientBase {
         let fetchOptions: RequestInit = {};
 
         fetchOptions.method = requestParams.method || "GET";
-        fetchOptions.mode = "cors";
+        fetchOptions.mode = "no-cors";
 
         if (!requestParams.isRawData && requestParams.body && fetchOptions.method.toUpperCase() !== 'GET') {
             fetchOptions.body = JSON.stringify(requestParams.body);
